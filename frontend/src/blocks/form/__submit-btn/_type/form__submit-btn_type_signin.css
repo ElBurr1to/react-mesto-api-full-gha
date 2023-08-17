@@ -1,0 +1,11 @@
+.form__submit-btn_type_signin {
+  margin-top: 216px;
+  background: white;
+  color: black;
+}
+
+@media (max-width: 767px) {
+  .form__submit-btn_type_signin {
+    margin-top: 173px;
+  }
+}

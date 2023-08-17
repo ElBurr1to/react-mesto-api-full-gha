@@ -1,0 +1,15 @@
+.popup__content_type_info {
+  padding: 60px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+@media (max-width: 767px) {
+  .popup__content_type_info {
+    padding: 50px 38px;
+    gap: 32px;
+  }
+}

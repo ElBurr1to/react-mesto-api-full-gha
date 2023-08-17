@@ -1,0 +1,7 @@
+.burger_active {
+  width: 20px;
+  height: 20px;
+  background-image: url(../../../images/close.png);
+  background-position: center;
+  background-size: cover;
+}

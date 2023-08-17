@@ -1,0 +1,6 @@
+@media (min-width: 768px) {
+  .header__link {
+    line-height: 22px;
+    font-size: 18px;
+  }
+}

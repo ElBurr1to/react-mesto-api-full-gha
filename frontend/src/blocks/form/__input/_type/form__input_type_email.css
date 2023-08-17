@@ -1,0 +1,9 @@
+.form__input_type_email {
+  margin-top: 50px;
+}
+
+@media (max-width: 767px) {
+  .form__input_type_email {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,6 @@
+.form__link {
+  display: block;
+  width: fit-content;
+  margin: 15px auto 0;
+  font-weight: 400;
+}

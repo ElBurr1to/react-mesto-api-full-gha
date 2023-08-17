@@ -1,0 +1,11 @@
+.navbar__signout-btn {
+  background-color: black;
+  color: #a9a9a9;
+  border: none;
+  padding: 0;
+}
+
+.navbar__signout-btn:hover {
+  color: white;
+  cursor: pointer;
+}

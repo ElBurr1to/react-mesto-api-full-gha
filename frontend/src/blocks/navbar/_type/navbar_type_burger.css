@@ -1,0 +1,16 @@
+.navbar_type_burger {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(84, 84, 84, .7);
+}
+
+
+
+@media (min-width: 768px) {
+  .navbar_type_burger {
+    display: none;
+  }
+}

@@ -1,0 +1,24 @@
+.form__input {
+  width: 100%;
+  padding: 0 0 9px 0;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 10px;
+}
+
+.form__input:focus {
+  outline-offset: 2px;
+}
+
+.form__input::placeholder {
+  color: #c4c4c4;
+}
+
+@media (max-width: 767px) {
+  .form__input {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

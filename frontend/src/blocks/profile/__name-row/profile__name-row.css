@@ -1,0 +1,14 @@
+.profile__name-row {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  margin-bottom: 7px;
+}
+
+@media (max-width: 767px) {
+  .profile__name-row {
+    gap: 10px;
+    margin-right: -28px;
+  }
+}
+
