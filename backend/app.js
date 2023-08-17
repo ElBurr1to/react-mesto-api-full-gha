@@ -39,5 +39,5 @@ app.use(errors());
 app.use(errorHandler);
 
 app.listen(PORT, () => {
-  console.log(`Running on port ${PORT}`);
+  console.log(`Running on port: ${PORT}`);
 });
