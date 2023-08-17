@@ -8,7 +8,7 @@ const router = require('./routes/index');
 const errorHandler = require('./middlewares/errorHandler');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
-const { PORT } = process.env;
+const { PORT, NODE_ENV } = process.env;
 
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb', {});
 
@@ -38,6 +38,6 @@ app.use(errorLogger);
 app.use(errors());
 app.use(errorHandler);
 
-app.listen(PORT, () => {
+app.listen(NODE_ENV === 'production' ? PORT : 3000, () => {
   console.log(`Running on port: ${PORT}`);
 });

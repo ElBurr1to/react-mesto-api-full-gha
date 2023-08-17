@@ -8,7 +8,7 @@ const ValidationError = require('../errors/ValidationError');
 const NotFoundError = require('../errors/NotFoundError');
 const AlreadyExistsError = require('../errors/AlreadyExistsError');
 
-const { JWT_SECRET } = process.env;
+const { JWT_SECRET, NODE_ENV } = process.env;
 
 function getUsers(req, res, next) {
   User.find({})
@@ -120,7 +120,7 @@ function login(req, res, next) {
 
   User.findUserByCredentials(email, password)
     .then((user) => {
-      const token = jwt.sign({ _id: user._id }, JWT_SECRET);
+      const token = jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'SECRET');
 
       res
         .cookie('token', token, {
