@@ -52,7 +52,7 @@ function Login(props) {
           <h1 className="form__title">Вход</h1>
           <input type="text" id="email" name="email" className="form__input form__input_type_email form__input_type_dark" value={values.email} onChange={handleChange} placeholder="Email" aria-label="Email" required minLength="2" maxLength="40" />
           <p className="form__input-error form__input-error_type_email">Ошибка</p>
-          <input type="text" id="password" name="password" className="form__input form__input_type_password form__input_type_dark" value={values.password} onChange={handleChange} placeholder="Пароль" aria-label="Пароль" required minLength="2" maxLength="200" />
+          <input type="password" id="password" name="password" className="form__input form__input_type_password form__input_type_dark" value={values.password} onChange={handleChange} placeholder="Пароль" aria-label="Пароль" required minLength="2" maxLength="200" />
           <p className="form__input-error form__input-error_type_password">Ошибка</p>
           <button type="submit" className={`form__submit-btn form__submit-btn_type_signin`} aria-label="Войти">Войти</button>
         </div>

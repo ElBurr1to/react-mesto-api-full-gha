@@ -4,10 +4,19 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const { errors } = require('celebrate');
 const cors = require('cors');
+const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
+
 const router = require('./routes/index');
 const errorHandler = require('./middlewares/errorHandler');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+  standardHeaders: true,
+  legacyHeaders: false,
+});
 const { PORT, NODE_ENV } = process.env;
 
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb', {});
@@ -23,6 +32,8 @@ app.use(cors({
   credentials: true,
   origin: ['http://localhost:3000', 'https://elburrito.mesto.nomoreparties.co'],
 }));
+app.use(helmet());
+app.use(limiter);
 
 app.use(requestLogger);
 
